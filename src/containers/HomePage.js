@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/conhecaActions';
 import YoutubePlayer from '../components/YoutubePlayer';
+import ThemeGroup from '../components/ThemeGroup';
 
 class HomePage extends Component {
   render() {
@@ -14,15 +15,9 @@ class HomePage extends Component {
             appState={this.props.appState}
             playVideo={this.props.actions.playFeaturedVideo} />
         </div>
-        <div className="themes-group__with-icons">
-          <h2>mais questões dos jovens</h2>
-          <p>O tempo na TV é limitado e não coube tudo lá. Por isso, colocamos aqui as outras perguntas feitas pelos estudantes e as respostas dos nossos porta-vozes e líderes da bancada.</p>
-          <div className="theme-details">
-
-          </div>
-        </div>
-        <div className="themes-group"></div>
-        <div className="themes-group"></div>
+        <ThemeGroup appState={this.props.appState} title="mais questões dos jovens" description="O tempo na TV é limitado e não coube tudo lá. Por isso, colocamos aqui as outras perguntas feitas pelos estudantes e as respostas dos nossos porta-vozes e líderes da bancada." />
+        <ThemeGroup appState={this.props.appState} title="posições do partido" description="Desde a fundação da REDE, já defendemos muitas posições em debates sobre temas de interesse público. Com o registro no TSE, a nossa bancada tem participado de várias votações importantes e ações respaldadas pela sociedade, como o pedido de cassação do deputado Eduardo Cunha e do senador Delcídio do Amaral, ex-líder do governo." />
+        <ThemeGroup appState={this.props.appState} title="Mas… e a Marina?" description="A divulgação de mentiras e boatos nas redes sociais é orquestrada e tem a finalidade de enganar os cidadãos e atacar a honra de adversários políticos. O pior é que muitas pessoas compartilham esses conteúdos sem pesquisar a veracidade, e de tanto as mentiras se espalharem, ela acaba parecendo verdade. Nesta página, vamos disponibilizar o máximo possível de informaçoes sobre os diversos temas que ja foram distorcidos por aí." />
       </div>
     );
   }

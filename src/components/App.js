@@ -14,7 +14,7 @@ const App = (props) => {
       <div className="header">
         <div className="container">
           <h1>conheça a rede</h1>
-          <p>A página conheça a Rede é uma página de apresentação da Rede, com informações básicas em linguagem acessível sobre os posicionamentos já adotados em notas ou manifestações públicas. Pode ser considerada um contato inicial com a Rede para quem quer compreender minimamente o partido antes de se aproximar. As informações mais aprofundadas estarão no site institucional.</p>
+          <p>Esta página foi criada para apresentar de forma didática a visão da REDE sobre diversos temas de interesse da sociedade que foram debatidos desde a nossa fundação, em 2013. O conteúdo será permanentemente atualizado e você pode colaborar, enviando perguntas, críticas e sugestões.</p>
         </div>
       </div>
 

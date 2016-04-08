@@ -3,9 +3,7 @@ import React, { PropTypes } from 'react';
 // Since this component is simple and static, there's no parent container for it.
 const YoutubePlayer = ({id, playVideo, appState}) => {
 
-    const thumbnail = {
-      backgroundImage: 'url(http://i.ytimg.com/vi/' + id + '/sddefault.jpg)'
-    };
+    const thumbnail = 'url(http://i.ytimg.com/vi/' + id + '/sddefault.jpg)';
 
     const size = {
       width: '640px',
@@ -15,7 +13,7 @@ const YoutubePlayer = ({id, playVideo, appState}) => {
     return (<div>
       {
         !appState.isPlaying
-        ? <div className="youtube" style={{...size, thumbnail}}><div className="play" onClick={playVideo}></div></div>
+        ? <div className="youtube" style={{...size, backgroundImage: thumbnail}}><div className="play" onClick={playVideo}></div></div>
       : <iframe frameBorder="0" src={"https://www.youtube.com/embed/" + id + "?autoplay=1&autohide=1&modestbranding=1&showinfo=0&controls=0&vq=hd720"} style={size} />
       }
     </div>);
