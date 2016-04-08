@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
-export function saveFuelSavings(settings) {
-	return { type: types.SAVE_FUEL_SAVINGS, settings };
+export function playFeaturedVideo() {
+	return { type: types.PLAY_FEATURED_VIDEO };
 }
 
 export function calculateFuelSavings(settings, fieldName, value) {

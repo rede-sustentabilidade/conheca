@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
+import YoutubePlayer from './YoutubePlayer';
 
 const App = (props) => {
   return (
@@ -17,11 +18,9 @@ const App = (props) => {
         </div>
       </div>
 
-      <div className="video-featured"></div>
+      {props.children}
 
       <div className="footer"></div>
-
-      {props.children}
     </div>
   );
 };

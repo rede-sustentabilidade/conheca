@@ -1,6 +1,6 @@
 import chai, {should} from 'chai';
-import FuelSavingsPage from './FuelSavingsPage';
+import HomePage from './HomePage';
 
-describe('Fuel Savings Page', () => {
+describe('Home Page', () => {
 
 });
