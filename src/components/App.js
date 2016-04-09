@@ -7,7 +7,11 @@ const App = (props) => {
     <div>
       <div className="topbar">
         <div className="container">
-          <a href="https://redesustentabilidade.org.br">Visitar site da #Rede</a>
+          <a href="https://redesustentabilidade.org.br" className="menuItem">
+            <i className="logo-rede"></i>Rede Sustentabilidade
+          </a>
+           <a href="https://twitter.com/maisumnarede" target="_blank" className="menuItem menuItem--redes"><i className="fa fa-twitter"></i></a>
+           <a href="https://facebook.com/BrasilEmRede" target="_blank" className="menuItem menuItem--redes"><i className="fa fa-facebook-official"></i></a>
         </div>
       </div>
 
@@ -20,7 +24,9 @@ const App = (props) => {
 
       {props.children}
 
-      <div className="footer"></div>
+      <div className="footer">
+        <a href="https://redesustentabilidade.org.br"><i className="logo-rede"></i></a>
+      </div>
     </div>
   );
 };

@@ -3,14 +3,14 @@ import React, { PropTypes } from 'react';
 // Since this component is simple and static, there's no parent container for it.
 const YoutubePlayer = ({id, playVideo, appState}) => {
 
-    const thumbnail = 'url(http://i.ytimg.com/vi/' + id + '/sddefault.jpg)';
+    const thumbnail = 'url(http://i.ytimg.com/vi/' + id + '/maxresdefault.jpg)';
 
     const size = {
-      width: '640px',
-      height: '360px'
+      width: '100%',
+      height: '555px'
     };
 
-    return (<div>
+    return (<div className="video-featured">
       {
         !appState.isPlaying
         ? <div className="youtube" style={{...size, backgroundImage: thumbnail}}><div className="play" onClick={playVideo}></div></div>
