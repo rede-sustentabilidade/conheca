@@ -1,13 +1,16 @@
 import React, { PropTypes } from 'react';
 import ThemeDetails from '../components/ThemeDetails';
 
-const ThemeGroup = ({title, description, appState}) => {
+const ThemeGroup = ({title, description, appState, category='jovens'}) => {
   return (
     <div className="themes-group">
       <h2>{title}</h2>
       <p>{description}</p>
-      <ThemeDetails color="#000" title="testando as titulos" id="12" slug="testando-url" />
-      <ThemeDetails image="/images/teste.png" title="testando as titulos" id="12" slug="testando-url" />
+      {appState.themes.map((data) => {
+        if (data.list_categories[0].name === category) {
+          return (<ThemeDetails category={category} image={data.url_featured_media} title={data.title.rendered} id={data.id} slug={data.slug} />);
+        }
+      })}
     </div>
   );
 };
@@ -15,7 +18,8 @@ const ThemeGroup = ({title, description, appState}) => {
 ThemeGroup.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  appState: PropTypes.object.isRequired
+  appState: PropTypes.object.isRequired,
+  category: PropTypes.string
 };
 
 export default ThemeGroup;

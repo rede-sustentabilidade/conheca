@@ -51,7 +51,7 @@ h1 {
   text-align: center;
 }
 .menuItem:hover {
-	text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
+	text-shadow: 0px 0px 10px rgba(200, 200, 200, 1);
 }
 .menuItem--redes {
   line-height: 1.5em;
@@ -67,6 +67,9 @@ h1 {
     @include span(50%);
     color: #fff;
   }
+	a:visited {
+		color: #fff;
+	}
 }
 
 .video-featured {
@@ -112,9 +115,46 @@ h1 {
   }
   p {
     text-align: center;
-    margin: 0 auto;
-    width: 75%;
+    margin: 0 auto 2em;
+    width: 85%;
+		color: #444;
   }
+	text-align: center;
+}
+
+.theme-details {
+	display: inline-block;
+	width: 19%;
+	//border-right: .5em solid #dadad5;
+	background-color: #319d8b;
+	//height: 9.8em;
+	padding: 0;
+	margin-right: 1%;
+	margin-bottom: .5%;
+
+	&:hover {
+		box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.75);
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
+}
+
+.theme-details--posicoes,
+.theme-details--marina {
+	height: 5.5em;
+	text-transform: uppercase;
+	color: #dadad5;
+	text-align: left;
+	padding: .8em;
+}
+.theme-details--posicoes {
+	background-color: #319d8b;
+}
+.theme-details--marina {
+	background-color: #2eb6c2;
 }
 
 .page-actions {
@@ -141,7 +181,7 @@ h1 {
   }
 
 	&:hover {
-		box-shadow: 1px 0px 4px 1px rgba(50, 50, 50, 0.75);
+		box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.75);
 	}
 }
 

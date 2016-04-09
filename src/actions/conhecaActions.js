@@ -10,11 +10,11 @@ function saveThemes(data) {
 
 export function loadThemes() {
 		return (dispatch) => {
-			return fetch('http://rede.site/wp-json/wp/v2/conheca')
+			return fetch('https://redesustentabilidade.org.br/wp-json/wp/v2/conheca?per_page=100')
 			.then(response => response.json())
       .then(response => {
 				dispatch(saveThemes(response));
-			})
+			});
 		};
 }
 

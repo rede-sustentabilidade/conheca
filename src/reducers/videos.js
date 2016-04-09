@@ -5,7 +5,10 @@ import objectAssign from 'object-assign';
 const initialState = {
   isPlaying: false,
   currentTheme: {},
-  themes: [{}]
+  themes: [{
+    title: { rendered: '' },
+    list_categories: [{name:''}]
+  }]
 };
 
 //IMPORTANT: Note that with Redux, state should NEVER be changed.
