@@ -1,5 +1,5 @@
 build:
-    image: node:5
+    image: node:5.0
     commands:
         - apt-get update && apt-get -y install s3cmd
         - npm install
