@@ -16,7 +16,8 @@
     "prebuild": "npm run clean-dist && npm run build:html",
     "build": "babel-node tools/build.js && npm run open:dist",
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --recursive \"./src/**/*.spec.js\" --require ignore-styles",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "deploy": "s3cmd sync ./dist/ s3://website-conheca/"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -26,6 +27,7 @@
     "object-assign": "4.0.1",
     "react": "15.0.0",
     "react-dom": "15.0.0",
+    "react-modal": "1.0.0",
     "react-redux": "4.4.0",
     "react-router": "2.0.0",
     "redux": "3.3.1",

@@ -9,7 +9,7 @@ import NotFoundPage from './components/NotFoundPage.js';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="/tema/:id" component={AboutPage}/>
+    <Route path="/tema/:id/:slug" component={HomePage}/>
     <Route path="*" component={NotFoundPage} />
   </Route>
 );

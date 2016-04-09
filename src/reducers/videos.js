@@ -4,7 +4,9 @@ import objectAssign from 'object-assign';
 
 const initialState = {
   isPlaying: false,
-  currentTheme: {},
+  currentTheme: [
+    {content:{rendered:''}}
+  ],
   themes: [{
     title: { rendered: '' },
     list_categories: [{name:''}]
@@ -24,7 +26,14 @@ export default function fuelSavingsAppState(state = initialState, action) {
 			return objectAssign({}, state, { isPlaying: true });
 
     case OPEN_THEME_DETAILS:
-      return objectAssign({}, state, { currentTheme: {} });
+    {
+      let theme = state.themes.filter((data) => {
+        if (data.id === parseInt(action.id)) {
+          return data;
+        }
+      });
+      return objectAssign({}, state, { currentTheme: theme });
+    }
     case SAVE_THEMES:
       return objectAssign({}, state, { themes: action.data });
 		default:

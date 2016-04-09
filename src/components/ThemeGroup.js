@@ -8,7 +8,7 @@ const ThemeGroup = ({title, description, appState, category='jovens'}) => {
       <p>{description}</p>
       {appState.themes.map((data) => {
         if (data.list_categories[0].name === category) {
-          return (<ThemeDetails category={category} image={data.url_featured_media} title={data.title.rendered} id={data.id} slug={data.slug} />);
+          return (<ThemeDetails key={data.id} category={category} image={data.url_featured_media} title={data.title.rendered} id={data.id} slug={data.slug} />);
         }
       })}
     </div>

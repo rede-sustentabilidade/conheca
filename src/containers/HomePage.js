@@ -4,16 +4,19 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/conhecaActions';
 import YoutubePlayer from '../components/YoutubePlayer';
 import ThemeGroup from '../components/ThemeGroup';
-
+import Modal from 'react-modal';
 class HomePage extends Component {
 
   componentWillMount() {
-    this.props.actions.loadThemes();
+    this.props.actions.loadThemes(this.props.params.id);
   }
 
   render() {
+    let currentTheme = this.props.appState.currentTheme;
+
     return (
       <div className="main-content container">
+        {currentTheme[0].content.rendered !== '' ? <Modal shouldCloseOnOverlayClick={true} isOpen={true}><div dangerouslySetInnerHTML={{__html:currentTheme[0].content.rendered}} /></Modal> : ''}
         <YoutubePlayer
           id="lR4tJr7sMPM"
           appState={this.props.appState}
@@ -32,7 +35,8 @@ class HomePage extends Component {
 
 HomePage.propTypes = {
   actions: PropTypes.object.isRequired,
-  appState: PropTypes.object.isRequired
+  appState: PropTypes.object.isRequired,
+  params: PropTypes.object
 };
 
 function mapStateToProps(state) {

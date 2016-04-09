@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
+import { Link, IndexLink } from 'react-router';
 
 const ThemeDetails = ({image,title,id,slug,color, category='jovens'}) => {
   return (
-    <a className={"theme-details theme-details--" + category} href={"temas/" + id + "/" + slug}>
+    <Link className={"theme-details theme-details--" + category} to={"/tema/" + id + "/" + slug}>
       {image ? <img src={image} alt={title} /> : <span>{title}</span>}
-    </a>
+    </Link>
   );
 };
 

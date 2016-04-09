@@ -1,0 +1,17 @@
+build:
+    image: node:5
+    commands:
+        - apt-get update && apt-get -y install s3cmd
+        - npm install
+        - npm build
+cache:
+    mount:
+        - node_modules
+deploy:
+    bash:
+        script:
+            - npm run deploy
+        branch: master
+        force: false
+        when:
+            branch: master
