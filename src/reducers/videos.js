@@ -1,9 +1,10 @@
-import {PLAY_FEATURED_VIDEO, OPEN_THEME_DETAILS, SAVE_THEMES} from '../constants/ActionTypes';
+import {PLAY_FEATURED_VIDEO, OPEN_THEME_DETAILS, SAVE_THEMES, CLOSE_THEME_DETAILS} from '../constants/ActionTypes';
 
 import objectAssign from 'object-assign';
 
 const initialState = {
   isPlaying: false,
+  isOpenModal: false,
   currentTheme: [
     {content:{rendered:''}}
   ],
@@ -25,6 +26,8 @@ export default function fuelSavingsAppState(state = initialState, action) {
       // In a real app using Redux, you might use redux-thunk and handle the async call in fuelSavingsActions.js
 			return objectAssign({}, state, { isPlaying: true });
 
+    case CLOSE_THEME_DETAILS:
+      return objectAssign({}, state, { isOpenModal: false });
     case OPEN_THEME_DETAILS:
     {
       let theme = state.themes.filter((data) => {
@@ -32,7 +35,7 @@ export default function fuelSavingsAppState(state = initialState, action) {
           return data;
         }
       });
-      return objectAssign({}, state, { currentTheme: theme });
+      return objectAssign({}, state, { currentTheme: theme, isOpenModal: true });
     }
     case SAVE_THEMES:
       return objectAssign({}, state, { themes: action.data });

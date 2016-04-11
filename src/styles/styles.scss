@@ -188,6 +188,13 @@ h1 {
 .button--twitter { background-color: #1da1f2; }
 .button--facebook { background-color: #3b5998; }
 
+.close {
+	font-size: 2em;
+	float: right;
+	color: #444;
+	margin: -.5em 0 .5em 0;
+}
+
 @media (max-width: 768px) {
   h1, .themes-group h2 {
     font-size: 2.3em;

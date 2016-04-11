@@ -8,6 +8,10 @@ function saveThemes(data) {
 	return { type: types.SAVE_THEMES, data };
 }
 
+export function handleCloseModal() {
+	return { type: types.CLOSE_THEME_DETAILS };
+}
+
 export function loadThemes(id=null) {
 		return (dispatch) => {
 			return fetch('https://redesustentabilidade.org.br/wp-json/wp/v2/conheca?per_page=100')

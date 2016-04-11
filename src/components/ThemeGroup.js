@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ThemeDetails from '../components/ThemeDetails';
 
 const ThemeGroup = ({title, description, appState, category='jovens'}) => {
+
   return (
     <div className="themes-group">
       <h2>{title}</h2>
