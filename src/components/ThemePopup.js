@@ -19,7 +19,7 @@ const ThemePopup = ({content, isOpenModal, handleCloseModal}) => {
 
   return (content !== ''
     ? <Modal style={customStyles} isOpen={isOpenModal}><a className="close" href="javascript:void(0);" onClick={handleCloseModal}><i className="fa fa-times"></i></a><div dangerouslySetInnerHTML={{__html:content}} /></Modal>
-  : <p>Carregando</p>
+  : <span></span>
   );
 
 };
