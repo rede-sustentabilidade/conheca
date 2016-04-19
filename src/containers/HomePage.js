@@ -37,7 +37,6 @@ class HomePage extends Component {
 
         <ThemeGroup category="jovens" appState={this.props.appState} title="MAIS PERGUNTAS DOS JOVENS" description="Não coube tudo nos dez minutos da TV.  Por isso, colocamos as outras perguntas aqui. É só clicar no tema e assistir à resposta!" />
         <ThemeGroup category="posicoes" appState={this.props.appState} title="POSIÇÕES DA REDE" description="Nesses 3 anos, já promovemos e participamos de vários debates. E nossa bancada tem atuado em votações muito importantes no Congresso Nacional. Clique no tema e saiba mais:" />
-        <ThemeGroup category="marina" appState={this.props.appState} title="Mas...e a Marina?" description="Tem muita informação falsa rolando nas redes. Aqui você pode conhecer os VERDADEIROS posicionamentos de Marina Silva:" />
       </div>
     );
   }

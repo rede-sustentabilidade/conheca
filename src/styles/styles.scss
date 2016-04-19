@@ -71,6 +71,7 @@ h1 {
     @include span(50%);
     color: #fff;
   }
+  a,
 	a:visited {
 		color: #fff;
 	}
@@ -81,6 +82,7 @@ h1 {
 .video-featured {
   @include span(100%);
   margin: 4em 0 0;
+  text-align: center;
 }
 
 .youtube {
@@ -112,7 +114,7 @@ h1 {
 				vertical-align: middle;
 				text-align: center;
 				font-size: 6em;
-				color: #319d8b;
+				color: #fff;
 				text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
 		}
 }

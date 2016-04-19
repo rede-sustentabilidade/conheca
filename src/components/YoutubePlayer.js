@@ -5,11 +5,11 @@ import MediaQuery from 'react-responsive';
 const YoutubePlayer = ({id, playVideo, appState}) => {
 
     const thumbnail = 'url(//i.ytimg.com/vi/' + id + '/maxresdefault.jpg)';
-    const embed = "//www.youtube.com/embed/" + id + "?autoplay=1&autohide=1&modestbranding=1&showinfo=0&controls=0&vq=hd720";
-    let size = { width: '100%', height: '555px'};
+    const embed = "//www.youtube.com/embed/" + id + "?autoplay=1&autohide=1&modestbranding=1&showinfo=0&controls=1&vq=hd720";
+    let size = { 'width': '100%', 'max-width': '854px', height: '480px'};
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      size = { width: '100%', height: '205px'};
+      size = { width: '100%', 'max-width': '427px', height: '240px'};
     }
 
     return (<div className="video-featured">
@@ -20,7 +20,7 @@ const YoutubePlayer = ({id, playVideo, appState}) => {
               <i className="fa fa-play-circle"></i>
             </div>
           </div>
-        : <iframe frameBorder="0" src={embed} style={size} />
+        : <iframe allowFullScreen="allowFullScreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" frameBorder="0" src={embed} style={size} />
       }
     </div>);
 };

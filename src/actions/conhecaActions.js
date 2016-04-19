@@ -1,4 +1,5 @@
 import * as types from '../constants/ActionTypes';
+import 'whatwg-fetch';
 
 export function playFeaturedVideo() {
 	return { type: types.PLAY_FEATURED_VIDEO };
