@@ -123,14 +123,14 @@ h1 {
 }
 
 .theme-details {
-	display: inline-block;
+	display: inline-table;
 	width: 19%;
 	//border-right: .5em solid #dadad5;
 	background-color: #319d8b;
 	//height: 9.8em;
 	padding: 0;
 	margin-right: 1%;
-	margin-bottom: .5%;
+	margin-bottom: 1%;
 
 	&:hover {
 		box-shadow: 0px 0px 5px 1px rgba(50, 50, 50, 0.75);
